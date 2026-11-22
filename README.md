@@ -2,6 +2,8 @@
 
 Discover community events in a list or a month calendar, filter by category and date, RSVP as going or interested (or join a waitlist when full), and host your own events.
 
+**Live demo:** [https://kavishtolani.github.io/gatherly/](https://kavishtolani.github.io/gatherly/) — runs entirely in your browser; demo data is fictional and labelled.
+
 ![Discover — list view](docs/discover.png)
 
 | Calendar view | Mobile |
@@ -41,3 +43,7 @@ npm run test:e2e   # Playwright smoke test (npm run e2e:install once if Chromium
 ## Future improvements
 
 - Automatic waitlist promotion, editing/cancelling hosted events, ICS export per event.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE).
