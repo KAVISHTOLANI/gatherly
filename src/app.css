@@ -1,0 +1,228 @@
+.hero-events {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+.hero-events .event-card {
+  box-shadow: none;
+}
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+  gap: 12px;
+}
+.event-card {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.event-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--rule);
+}
+.event-card.is-past {
+  opacity: 0.7;
+}
+.ev-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  align-self: start;
+}
+.ev-date strong {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--accent-text);
+}
+.ev-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 4px 0 2px;
+  overflow-wrap: anywhere;
+}
+.ev-body p {
+  margin: 0 0 8px;
+}
+.rsvp-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+.rsvp-going {
+  background: var(--accent);
+  color: #fff;
+}
+.rsvp-interested {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.rsvp-waitlist {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+.seg {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 3px;
+}
+.seg button {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: none;
+  background: none;
+  color: var(--muted);
+  padding: 7px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.seg button[aria-checked='true'] {
+  background: var(--accent);
+  color: #fff;
+}
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 18px;
+}
+.cal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.cal {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+.cal-head {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  padding-bottom: 4px;
+}
+.cal-day {
+  font: inherit;
+  height: 56px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+.cal-day.has-events {
+  font-weight: 700;
+}
+.cal-day.is-today {
+  border-color: var(--accent);
+}
+.cal-day.is-selected {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.cal-dots {
+  display: flex;
+  gap: 3px;
+  height: 6px;
+}
+.cal-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rule);
+}
+.cal-dots i.going {
+  background: var(--accent);
+}
+.cal-day.is-selected .cal-dots i {
+  background: #fff;
+}
+.cal-sel-title {
+  margin: 0;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px 14px;
+  margin: 0;
+}
+.facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 4px;
+}
+.facts dd {
+  margin: 0;
+}
+.rsvp-card {
+  position: sticky;
+  top: calc(var(--nav-h) + 16px);
+}
+.big-count {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.big-count small {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.rsvp-actions {
+  display: grid;
+  gap: 8px;
+}
+.narrow {
+  max-width: 860px;
+}
+@media (max-width: 860px) {
+  .cal-layout,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .rsvp-card {
+    position: static;
+  }
+  .toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
