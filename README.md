@@ -1,5 +1,17 @@
 # Gatherly
 
+<!-- screenshots:start -->
+<p align="center">
+  <img src="docs/screenshots/desktop.png" alt="Gatherly on a Mac (1440×900)" width="100%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/tablet.png" alt="Gatherly on a tablet" height="460">
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/phone.png" alt="Gatherly on a phone" height="460">
+</p>
+<p align="center"><sub>Mac (1440×900) · Tablet (820×1180) · Phone (390×844)</sub></p>
+<!-- screenshots:end -->
+
 Discover community events in a list or a month calendar, filter by category and date, RSVP as going or interested (or join a waitlist when full), and host your own events.
 
 **Live demo:** [https://kavishtolani.github.io/gatherly/](https://kavishtolani.github.io/gatherly/) — runs entirely in your browser; demo data is fictional and labelled.
